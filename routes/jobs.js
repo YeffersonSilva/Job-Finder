@@ -1,8 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const Job     = require('../models/Job');
-
-
+///rota test
 router.get('/test', (req, res) => {
     res.send('Test route');
 });
@@ -10,11 +9,11 @@ router.get('/test', (req, res) => {
 //add job vis post
 
 router.post('/add', (req, res) => {
-    let { title, salary, description, company, email, new_jobs } = req.body;
+    let { titulo, salary, description, company, email, new_jobs } = req.body;
 
     //insert
     Job.create({
-        title,
+        titulo,
         salary,
         description,
         company,
